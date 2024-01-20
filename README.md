@@ -5,13 +5,13 @@
 <img loading="lazy" width="1024px" src="./images/picture2.png" alt="image_name png" />
 
 ## Introduction
-...
+WIP
 
 ## How to prepare svg icons to be added to the font
-...
+WIP
 
 ## How to add a new entry to devicons.lua
-...
+WIP
 
 ## How to add svg icons to the font
 Clone the repo somewhere on your system.
@@ -26,7 +26,7 @@ Drag and drop the desired svg icons into the editor:
 
 Select the desired icons with the cursor.
 
-Co to the "Customize codes" menu, copy the glyph and paste it into a new entry inside `./plugins/devicons.lua`.
+Go to the "Customize codes" menu, copy the glyph and paste it into a new entry inside `./plugins/devicons.lua`.
 
 ## Credits
 - https://github.com/yamatsum/nonicons
