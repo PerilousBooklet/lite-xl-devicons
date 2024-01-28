@@ -74,7 +74,7 @@ local extension_icons = {
   [".sh"] = { "#4d5a5e", "" },  -- Shell
   [".java"] = { "#cc3e44", "" },
   [".scala"] = { "#cc3e44", "" },
-  [".kt"] = { "#F88A02", "" },  -- Kotlin
+  [".kt"] = { "#F88A02", "" }, [".kts"] = { "#F88A02", "" },  -- Kotlin
   [".pl"] = { "#519aba", "" },  -- Perl
   [".r"] = { "#358a5b", "" },
   [".rake"] = { "#701516", "" },
@@ -96,7 +96,7 @@ local extension_icons = {
   [".lsp"] = { "#FFFFFF", "" }, [".lisp"] = { "#FFFFFF", "" }, -- Lisp
   [".xml"] = {"#005FAD", ""},
   [".dart"] = {"#055A9C", ""},
-  --[".clj"] = {"", ""}, -- Clojure
+  [".clj"] = {"#91DC47", ""}, -- Clojure
   [".asm"] = {"#654EF0", ""}, -- Assembly
   [".nix"] = {"#7EB3DF", ""}, -- NIX
   [".scad"] = {"#e8b829", ""}, -- OpenSCAD
