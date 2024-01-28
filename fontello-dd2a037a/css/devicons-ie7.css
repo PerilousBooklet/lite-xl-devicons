@@ -398,3 +398,6 @@
 .icon-assembly { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe981;&nbsp;'); }
 .icon-lisp { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe982;&nbsp;'); }
 .icon-xml { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe983;&nbsp;'); }
+.icon-crystal { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe984;&nbsp;'); }
+.icon-erlang { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe985;&nbsp;'); }
+.icon-nix { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe986;&nbsp;'); }

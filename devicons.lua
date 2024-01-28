@@ -95,21 +95,22 @@ local extension_icons = {
   [".hs"] = {"#5E5086", ""}, -- Haskell
   [".lsp"] = { "#FFFFFF", "" }, [".lisp"] = { "#FFFFFF", "" }, -- Lisp
   [".xml"] = {"#005FAD", ""},
-  --[".dart"] = {"#055A9C", ""},
+  [".dart"] = {"#055A9C", ""},
   --[".clj"] = {"", ""}, -- Clojure
   [".asm"] = {"#654EF0", ""}, -- Assembly
-  --[".nix"] = {"#7EB3DF", ""},
+  [".nix"] = {"#7EB3DF", ""}, -- NIX
   [".scad"] = {"#e8b829", ""}, -- OpenSCAD
   --[".ino"] = {"#008184", ""}, -- Arduino WIP: svg icon needs adjustments
-  --[".awk"] = { "#E80000", "" }, WIP: svg icon needs adjustments
   --[".j2"] = { "#02D0FF", "" }, -- J
+  [".cr"] = { "#000000", "" }, -- Crystal
+  [".erl"] = { "#A90533", "" }, [".hrl"] = { "#A90533", "" }, -- Erlang
   -- Following without special icon:
   [".vim"] = { "#8f00ff", "" },
   [".ini"] = { "#ffffff", "" },
   [".fish"] = { "#ca2c92", "" },
   [".bash"] = { "#4169e1", "" },
   [".desktop"] = { "#6d8086", "" },
-  [".svelte"] = {"#FF3C00", ""},
+  [".svelte"] = {"#FF3C00", ""}
 }
 local known_names_icons = {
   ["changelog"] = { "#657175", "" }, ["changelog.txt"] = { "#4d5a5e", "" }, ["changelog.md"] = { "#519aba", "" },
@@ -137,6 +138,7 @@ local known_names_icons = {
   --[""] = {"#68A063", ""}, -- Node.js
   --[""] = {"#CC3534", ""}, -- NPM
   ["babel.config.json"] = {"#F9DC3E", ""}, [".babelrc.json"] = {"#F9DC3E", ""}, -- Babel
+  [".tmux.conf"] = { "#1BB91F", "" }, ["tmux.conf"] = { "#1BB91F", "" }
 }
 
 -- Preparing colors

@@ -1,0 +1,22 @@
+{
+  "addons": {
+    "id": "devicons",
+    "version": "0.1.0",
+    "mod_version": "3",
+    "description": "A plugin for Lite XL that provides devicons for the project files tree view.",
+    "files": [
+      {
+        "url": "https://github.com/PerilousBooklet/lite-xl-devicons/blob/main/devicons.lua",
+        "arch": "x86_64-linux",
+        "checksum": "",
+        "path": "plugins/devicons.lua"
+      },
+      {
+        "url": "https://github.com/PerilousBooklet/lite-xl-devicons/blob/main/fontello-a6929858/font/devicons.ttf",
+        "arch": "x86_64-linux",
+        "checksum": "",
+        "path": "fonts/devicons.ttf"
+      }
+    ]
+  }
+}
