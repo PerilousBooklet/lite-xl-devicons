@@ -104,6 +104,7 @@ local extension_icons = {
   --[".j2"] = { "#02D0FF", "" }, -- J
   [".cr"] = { "#000000", "" }, -- Crystal
   [".erl"] = { "#A90533", "" }, [".hrl"] = { "#A90533", "" }, -- Erlang
+  [".vala"] = { "#706296", "" },
   -- Following without special icon:
   [".vim"] = { "#8f00ff", "" },
   [".ini"] = { "#ffffff", "" },
@@ -128,15 +129,15 @@ local known_names_icons = {
   --[""] = { "", "" }, -- Gradle WIP: svg icon needs adjustments
   -- Web dev framework configuration files
   ["svelte.config.js"] = {"#FF3C00", ""},
-  --["postcss.config.js"] = {"#DD3A0A", ""}, [".postcssrc"] = {"#DD3A0A", ""}, -- PostCSS WIP
+  --["postcss.config.js"] = {"#DD3A0A", ""}, [".postcssrc"] = {"#DD3A0A", ""}, -- PostCSS
   ["tailwind.config.js"] = {"#38BDF8", ""},
   ["alpine.config.js"] = {"#77C1D2", ""}, -- Alpine.js
   --[""] = {"#61DBFB", ""}, -- React
-  --[""] = {"#DE002D", ""}, -- Angular
-  --[""] = {"#3FB984", ""}, -- Vue
-  --[""] = {"#000000", ""}, -- Next.js
-  --[""] = {"#68A063", ""}, -- Node.js
-  --[""] = {"#CC3534", ""}, -- NPM
+  ["angular.json"] = {"#DE002D", ""}, -- Angular
+  ["vue.config.js"] = {"#3FB984", ""}, -- Vue
+  ["next.config.js"] = {"#000000", ""}, -- Next.js
+  ["package.json"] = {"#68A063", ""}, -- Node.js
+  [".npmrc"] = {"#CC3534", ""}, -- NPM
   ["babel.config.json"] = {"#F9DC3E", ""}, [".babelrc.json"] = {"#F9DC3E", ""}, -- Babel
   [".tmux.conf"] = { "#1BB91F", "" }, ["tmux.conf"] = { "#1BB91F", "" }
 }

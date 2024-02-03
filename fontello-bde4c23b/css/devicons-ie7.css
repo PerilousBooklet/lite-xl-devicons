@@ -402,3 +402,4 @@
 .icon-erlang { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe985;&nbsp;'); }
 .icon-nix { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe986;&nbsp;'); }
 .icon-clojure { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe987;&nbsp;'); }
+.icon-vala { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe988;&nbsp;'); }
