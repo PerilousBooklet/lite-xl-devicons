@@ -403,3 +403,5 @@
 .icon-nix { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe986;&nbsp;'); }
 .icon-clojure { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe987;&nbsp;'); }
 .icon-vala { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe988;&nbsp;'); }
+.icon-cmake { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe989;&nbsp;'); }
+.icon-odin { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe98a;&nbsp;'); }

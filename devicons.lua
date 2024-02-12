@@ -56,8 +56,8 @@ local previous_scale = SCALE
 local extension_icons = {
   [".lua"] = { "#51a0cf", "" },
   [".md"]  = { "#519aba", "" }, -- Markdown
-  [".cpp"] = { "#519aba", "" },
-  [".c"]   = { "#599eff", "" }, [".h"] = { "#599eff", "" },
+  [".cpp"] = { "#519aba", "" }, -- C++
+  [".c"]   = { "#599eff", "" }, [".h"] = { "#599eff", "" },
   [".py"]  = { "#3572A5", "" }, [".pyc"]  = { "#519aba", "" }, [".pyd"]  = { "#519aba", "" }, -- Python
   [".php"] = { "#a074c4", "" },
   [".cs"] = { "#596706", "" },  -- C#
@@ -75,7 +75,7 @@ local extension_icons = {
   [".java"] = { "#cc3e44", "" },
   [".scala"] = { "#cc3e44", "" },
   [".kt"] = { "#F88A02", "" }, [".kts"] = { "#F88A02", "" },  -- Kotlin
-  [".pl"] = { "#519aba", "" },  -- Perl
+  [".pl"] = { "#519aba", "" }, [".pm"] = { "#519aba", "" },  -- Perl
   [".r"] = { "#358a5b", "" },
   [".rake"] = { "#701516", "" },
   [".rb"] = { "#701516", "" },  -- Ruby
@@ -88,23 +88,24 @@ local extension_icons = {
   [".diff"] = { "#41535b", "" },
   [".ex"] = { "#a074c4", "" }, [".exs"] = { "#a074c4", "" },  -- Elixir
   [".tex"] = {"#467f22", ""}, [".sty"] = {"#467f22", ""}, [".cls"] = {"#467f22", ""}, [".dtx"] = {"#467f22", ""}, [".ins"] = {"#467f22", ""},
-  [".nim"] = { "#FFE953", "" },
+  [".nim"] = { "#FFE953", "" },   [".nims"] = { "#FFE953", "" },   [".nimble"] = { "#FFE953", "" },
   [".zig"] = { "#cbcb41", "" },
   [".jl"] = {"#9359A5", ""}, -- Julia
   [".wasm"] = {"#654EF0", ""}, -- WebAssembly
   [".hs"] = {"#5E5086", ""}, -- Haskell
-  [".lsp"] = { "#FFFFFF", "" }, [".lisp"] = { "#FFFFFF", "" }, -- Lisp
+  [".lsp"] = { "#FFFFFF", "" }, [".lisp"] = { "#FFFFFF", "" },
   [".xml"] = {"#005FAD", ""},
   [".dart"] = {"#055A9C", ""},
   [".clj"] = {"#91DC47", ""}, -- Clojure
-  [".asm"] = {"#654EF0", ""}, -- Assembly
-  [".nix"] = {"#7EB3DF", ""}, -- NIX
+  [".asm"] = {"#DE002D", ""}, -- Assembly
+  [".nix"] = {"#7EB3DF", ""},
   [".scad"] = {"#e8b829", ""}, -- OpenSCAD
-  --[".ino"] = {"#008184", ""}, -- Arduino WIP: svg icon needs adjustments
+  [".ino"] = {"#008184", ""}, -- Arduino
   --[".j2"] = { "#02D0FF", "" }, -- J
   [".cr"] = { "#000000", "" }, -- Crystal
   [".erl"] = { "#A90533", "" }, [".hrl"] = { "#A90533", "" }, -- Erlang
   [".vala"] = { "#706296", "" },
+  [".odin"] = { "#3882D2", "" },
   -- Following without special icon:
   [".vim"] = { "#8f00ff", "" },
   [".ini"] = { "#ffffff", "" },
@@ -113,10 +114,12 @@ local extension_icons = {
   [".desktop"] = { "#6d8086", "" },
   [".svelte"] = {"#FF3C00", ""}
 }
+
 local known_names_icons = {
   ["changelog"] = { "#657175", "" }, ["changelog.txt"] = { "#4d5a5e", "" }, ["changelog.md"] = { "#519aba", "" },
-  ["makefile"] = { "#6d8086", "" }, ["cmakelists.txt"] = { "#6d8086", "" }, -- CMake
-  ["meson.build"] = {"#6d8086", ""}, ["meson_options.txt"] = {"#6d8086", ""}, -- Meson
+  ["makefile"] = { "#6d8086", "" },
+  ["Cmakelists.txt"] = { "#0068C7", "" },
+  ["meson.build"] = {"#6d8086", ""}, ["meson_options.txt"] = {"#6d8086", ""}, -- WIP: original icon needs adjustments
   ["dockerfile"] = { "#296478", "" },
   ["docker-compose.yml"] = { "#4289a1", "" },
   ["license"] = { "#d0bf41", "" },
@@ -124,21 +127,22 @@ local known_names_icons = {
   ["init.lua"] = { "#2d6496", "" },
   ["setup.py"] = { "#559dd9", "" },
   ["build.zig"] = { "#6d8086", "" },
-  ["pkgbuild"] = {"#358fdd", ""}, -- Arch Linux's PKGBUILD
-  --[""] = { "", "" }, -- Maven WIP: svg icon needs adjustments
-  --[""] = { "", "" }, -- Gradle WIP: svg icon needs adjustments
+  ["pkgbuild"] = {"#358fdd", ""}, -- Arch Linux PKGBUILD
+  --[""] = { "", "" }, -- WIP: Maven svg icon needs adjustments
+  --[""] = { "", "" }, -- WIP: Gradle svg icon needs adjustments
   -- Web dev framework configuration files
   ["svelte.config.js"] = {"#FF3C00", ""},
-  --["postcss.config.js"] = {"#DD3A0A", ""}, [".postcssrc"] = {"#DD3A0A", ""}, -- PostCSS
+  --["postcss.config.js"] = {"#DD3A0A", ""}, [".postcssrc"] = {"#DD3A0A", ""},
   ["tailwind.config.js"] = {"#38BDF8", ""},
-  ["alpine.config.js"] = {"#77C1D2", ""}, -- Alpine.js
+  ["alpine.config.js"] = {"#77C1D2", ""},
   --[""] = {"#61DBFB", ""}, -- React
-  ["angular.json"] = {"#DE002D", ""}, -- Angular
-  ["vue.config.js"] = {"#3FB984", ""}, -- Vue
-  ["next.config.js"] = {"#000000", ""}, -- Next.js
+  ["angular.json"] = {"#DE002D", ""},
+  ["vue.config.js"] = {"#3FB984", ""},
+  ["next.config.js"] = {"#000000", ""},
   ["package.json"] = {"#68A063", ""}, -- Node.js
-  [".npmrc"] = {"#CC3534", ""}, -- NPM
-  ["babel.config.json"] = {"#F9DC3E", ""}, [".babelrc.json"] = {"#F9DC3E", ""}, -- Babel
+  [".npmrc"] = {"#CC3534", ""},
+  ["babel.config.json"] = {"#F9DC3E", ""}, [".babelrc.json"] = {"#F9DC3E", ""}, 
+  ["schema.prisma"] = { "#2D3748", "" },
   [".tmux.conf"] = { "#1BB91F", "" }, ["tmux.conf"] = { "#1BB91F", "" }
 }
 

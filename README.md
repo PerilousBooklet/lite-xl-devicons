@@ -4,8 +4,12 @@
 
 <img loading="lazy" width="1024px" src="./images/picture2.png" alt="image_name png" />
 
-## Introduction
-WIP
+## How to install
+Open a terminal window and run the following commands:
+```sh
+lpm repo add "https://github.com/PerilousBooklet/lite-xl-devicons"
+lpm install devicons
+```
 
 ## How to prepare svg icons to be added to the font
 WIP
