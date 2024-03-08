@@ -1,3 +1,14 @@
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'devicons';
+  font-style: normal;
+  font-weight: normal;
+
+  /* fix buttons height */
+  line-height: 1em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+}
 
 .icon-angular-16 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
 .icon-babel-16 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
@@ -394,3 +405,4 @@
 .icon-vala { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe988;&nbsp;'); }
 .icon-cmake { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe989;&nbsp;'); }
 .icon-odin { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe98a;&nbsp;'); }
+.icon-d { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe98b;&nbsp;'); }

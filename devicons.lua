@@ -112,7 +112,9 @@ local extension_icons = {
   [".fish"] = { "#ca2c92", "" },
   [".bash"] = { "#4169e1", "" },
   [".desktop"] = { "#6d8086", "" },
-  [".svelte"] = {"#FF3C00", ""}
+  [".svelte"] = {"#FF3C00", ""},
+  [".d"] = {"#B03931", ""}, [".di"] = {"#B03931", ""}, -- D
+  [".v"] = {"#536B8A", ""}, -- V .v .vv. vsh
 }
 
 local known_names_icons = {
