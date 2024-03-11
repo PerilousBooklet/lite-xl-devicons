@@ -2,7 +2,6 @@
 -- Author: PerilousBooklet (forked from Jipok's nonicons.lua)
 -- Doesn't work well with scaling mode == "ui"
 
-local core = require "core"
 local common = require "core.common"
 local config = require "core.config"
 local style = require "core.style"
@@ -143,7 +142,7 @@ local known_names_icons = {
   ["next.config.js"] = {"#000000", ""},
   ["package.json"] = {"#68A063", ""}, -- Node.js
   [".npmrc"] = {"#CC3534", ""},
-  ["babel.config.json"] = {"#F9DC3E", ""}, [".babelrc.json"] = {"#F9DC3E", ""}, 
+  ["babel.config.json"] = {"#F9DC3E", ""}, [".babelrc.json"] = {"#F9DC3E", ""},
   ["schema.prisma"] = { "#2D3748", "" },
   [".tmux.conf"] = { "#1BB91F", "" }, ["tmux.conf"] = { "#1BB91F", "" }
 }
