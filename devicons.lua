@@ -105,15 +105,16 @@ local extension_icons = {
   [".erl"] = { "#A90533", "" }, [".hrl"] = { "#A90533", "" }, -- Erlang
   [".vala"] = { "#706296", "" },
   [".odin"] = { "#3882D2", "" },
+  [".svelte"] = {"#FF3C00", ""},
+  [".d"] = {"#B03931", ""}, [".di"] = {"#B03931", ""}, -- D
+  [".v"] = {"#536B8A", ""}, -- V .v .vv. vsh
+  [".groovy"] = {"#357A93", ""}, -- "%.gvy$", "%.gy$", "%.gsh$"
   -- Following without special icon:
   [".vim"] = { "#8f00ff", "" },
   [".ini"] = { "#ffffff", "" },
   [".fish"] = { "#ca2c92", "" },
   [".bash"] = { "#4169e1", "" },
   [".desktop"] = { "#6d8086", "" },
-  [".svelte"] = {"#FF3C00", ""},
-  [".d"] = {"#B03931", ""}, [".di"] = {"#B03931", ""}, -- D
-  [".v"] = {"#536B8A", ""}, -- V .v .vv. vsh
 }
 
 local known_names_icons = {
@@ -123,14 +124,13 @@ local known_names_icons = {
   ["meson.build"] = {"#6d8086", ""}, ["meson_options.txt"] = {"#6d8086", ""}, -- WIP: original icon needs adjustments
   ["dockerfile"] = { "#296478", "" },
   ["docker-compose.yml"] = { "#4289a1", "" },
-  ["license"] = { "#d0bf41", "" },
+  ["license"] = { "#d0bf41", "" }, ["license.txt"] = { "#d0bf41", "" },
   ["readme.md"] = { "#72b886", "" }, ["readme"] = { "#72b886", "" },
   ["init.lua"] = { "#2d6496", "" },
   ["setup.py"] = { "#559dd9", "" },
   ["build.zig"] = { "#6d8086", "" },
   ["pkgbuild"] = {"#358fdd", ""}, -- Arch Linux PKGBUILD
-  --[""] = { "", "" }, -- WIP: Maven svg icon needs adjustments
-  --[""] = { "", "" }, -- WIP: Gradle svg icon needs adjustments
+  ["gradlew"] = { "#6d8086", "" }, ["gradlew.bat"] = { "#6d8086", "" }, -- Gradle
   -- Web dev framework configuration files
   ["svelte.config.js"] = {"#FF3C00", ""},
   --["postcss.config.js"] = {"#DD3A0A", ""}, [".postcssrc"] = {"#DD3A0A", ""},

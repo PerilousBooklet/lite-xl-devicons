@@ -1,5 +1,25 @@
 {
-  "addons": {
-    
-  }
+  "addons": [
+    {
+      "id": "font_devicons",
+      "type": "font",
+      "version": "1.0.0",
+      "mod_version": "3",
+      "description": "Devicons Font.",
+      "files": [
+        {
+          "url": "https://github.com/PerilousBooklet/lite-xl-devicons/blob/main/fontello-d7e95dcb/font/devicons.ttf",
+          "checksum": "8c40c2d794fbb85482367d10746742b7596e7057433ee254f55ca11c6c0c6ffb"
+        }
+      ]
+    }, {
+      "id": "devicons",
+      "type": "plugin",
+      "version": "1.0.0",
+      "mod_version": "3",
+      "description": "Devicons Plugin.",
+      "path": "plugins/devicons.lua",
+      "dependencies": { "font_devicons": {} }
+    }
+  ]
 }
