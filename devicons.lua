@@ -48,7 +48,7 @@ config.plugins.devicons = common.merge({
   }
 }, config.plugins.devicons)
 
-local icon_font = renderer.font.load(USERDIR.."/fonts/devicons.ttf", 15 * SCALE)
+local icon_font = renderer.font.load(USERDIR.."/fonts/font_devicons/devicons.ttf", 15 * SCALE)
 local chevron_width = icon_font:get_width("") -- ?
 local previous_scale = SCALE
 
