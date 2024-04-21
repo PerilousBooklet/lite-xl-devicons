@@ -5,7 +5,7 @@
       "type": "font",
       "version": "1.0.0",
       "mod_version": "3",
-      "description": "Devicons Font.",
+      "description": "Icons font for the devicons plugin.",
       "files": [
         {
           "url": "https://github.com/PerilousBooklet/lite-xl-devicons/raw/b6d97931a4a7939ed76ae93c83220a9c0fc02472/fontello-d7e95dcb/font/devicons.ttf",
@@ -17,7 +17,7 @@
       "type": "plugin",
       "version": "1.0.0",
       "mod_version": "3",
-      "description": "Devicons Plugin.",
+      "description": "PerilousBooklet's treeview icons for software developers.",
       "path": "devicons.lua",
       "dependencies": { "font_devicons": {} }
     }
