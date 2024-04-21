@@ -3,7 +3,7 @@
     {
       "id": "font_devicons",
       "type": "font",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "mod_version": "3",
       "description": "Icons font for the devicons plugin.",
       "files": [
@@ -15,7 +15,7 @@
     }, {
       "id": "devicons",
       "type": "plugin",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "mod_version": "3",
       "description": "PerilousBooklet's treeview icons for software developers.",
       "path": "devicons.lua",
