@@ -69,7 +69,7 @@ local extension_icons = {
   [".ex"] = { "#a074c4", "" }, [".exs"] = { "#a074c4", "" },  -- Elixir
   --[".f"] = {"#734796", ""}, [".F"] = {"#734796", ""}, [".f90"] = {"#734796", ""}, [".f95"] = {"#734796", ""}, [".f03"] = {"#734796", ""}, -- Fortran
   [".go"] = { "#519aba", "" },
-  [".groovy"] = {"#357A93", ""}, [".gvy"] = {"#357A93", ""}, [".gy"] = {"#357A93", ""}, [".gsh"] = {"#357A93", ""},
+  [".groovy"] = {"#357A93", ""}, [".gvy"] = {"#357A93", ""}, [".gy"] = {"#357A93", ""}, [".gsh"] = {"#357A93", ""},
   [".hs"] = {"#5E5086", ""}, -- Haskell
   [".html"] = { "#e34c26", "" }, [".html.erb"] = { "#e34c26", "" },
   [".ino"] = {"#008184", ""}, -- Arduino
@@ -80,10 +80,11 @@ local extension_icons = {
   [".js"] = { "#cbcb41", "" },  -- JavaScript
   [".json"] = { "#854CC7", "" },
   [".kt"] = { "#816EE4", "" }, [".kts"] = { "#816EE4", "" },  -- Kotlin
-  [".lsp"] = { "#FFFFFF", "" }, [".lisp"] = { "#FFFFFF", "" },
+  [".lisp"] = { "#FFFFFF", "" }, [".lsp"] = { "#FFFFFF", "" },
   [".lua"] = { "#51a0cf", "" },
+  [".ly"] = {"#FC7DB0", ""}, -- Lilypond
   [".md"]  = { "#519aba", "" }, -- Markdown
-  [".nim"] = { "#FFE953", "" },   [".nims"] = { "#FFE953", "" },   [".nimble"] = { "#FFE953", "" },
+  [".nim"] = { "#FFE953", "" }, [".nims"] = { "#FFE953", "" }, [".nimble"] = { "#FFE953", "" },
   [".nix"] = {"#7EB3DF", ""},
   [".odin"] = { "#3882D2", "" },
   [".php"] = { "#a074c4", "" },
@@ -104,12 +105,12 @@ local extension_icons = {
   [".tex"] = {"#467f22", ""}, [".sty"] = {"#467f22", ""}, [".cls"] = {"#467f22", ""}, [".dtx"] = {"#467f22", ""}, [".ins"] = {"#467f22", ""},
   [".toml"] = { "#6d8086", "" },
   [".ts"] = { "#519aba", "" },  -- TypeScript
-  [".v"] = {"#536B8A", ""}, -- V .v .vv. vsh
+  --[".v"] = {"#536B8A", ""}, [".vv"] = {"#536B8A", ""}, [".vsh"] = {"#536B8A", ""}, -- V
   [".vala"] = { "#706296", "" },
+  [".zig"] = { "#cbcb41", "" },
   [".wasm"] = {"#654EF0", ""}, -- WebAssembly
   [".xml"] = {"#005FAD", ""},
   [".yaml"] = { "#6d8086", "" }, [".yml"] = { "#6d8086", "" },
-  [".zig"] = { "#cbcb41", "" },
   -- Following without special icon:
   [".bash"] = { "#4169e1", "" },
   [".desktop"] = { "#6d8086", "" },
@@ -126,7 +127,7 @@ local known_names_icons = {
   ["babel.config.json"] = {"#F9DC3E", ""}, [".babelrc.json"] = {"#F9DC3E", ""},
   ["build.zig"] = { "#6d8086", "" },
   ["changelog"] = { "#657175", "" }, ["changelog.txt"] = { "#4d5a5e", "" }, ["changelog.md"] = { "#519aba", "" },
-  ["Cmakelists.txt"] = { "#0068C7", "" },
+  ["Cmakelists.txt"] = { "#0068C7", "" }, ["cmakelists.txt"] = { "#0068C7", "" },
   ["docker-compose.yml"] = { "#4289a1", "" },
   ["dockerfile"] = { "#296478", "" },
   ["gradlew"] = { "#6d8086", "" }, ["gradlew.bat"] = { "#6d8086", "" }, -- Gradle
@@ -168,11 +169,11 @@ function TreeView:get_item_icon(item, active, hovered)
     previous_scale = SCALE
   end
   if not config.plugins.devicons.use_default_dir_icons then
-    icon = "" -- generic document icon
+    icon = "" -- file icon
     font = icon_font
     color = style.text
     if item.type == "dir" then
-      icon = item.expanded and "" or "" -- open dir icon, closed dir icon ?
+      icon = item.expanded and "" or "" -- file dir icon open, file dir icon closed
     end
   end
   if config.plugins.devicons.draw_treeview_icons then
