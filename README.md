@@ -5,6 +5,11 @@
 <img loading="lazy" width="1024px" src="./images/picture2.png" alt="image_name png" />
 
 ## How to install
+
+> [!WARNING]  
+> `devicons` is currently undergoing maintenance.
+> Anyone who wants to use `devicons` now should uninstall it with `lpm` (if it was previously installed) and just copy/paste the `devicons.lua` and `devicons.ttf` files.
+
 Open a terminal window and run the following commands:
 ```sh
 lpm repo add "https://github.com/PerilousBooklet/lite-xl-devicons"

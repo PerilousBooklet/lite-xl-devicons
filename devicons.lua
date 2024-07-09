@@ -133,8 +133,8 @@ local known_names_icons = {
   ["gradlew"] = { "#6d8086", "" }, ["gradlew.bat"] = { "#6d8086", "" }, -- Gradle
   ["init.lua"] = { "#2d6496", "" },
   ["license"] = { "#d0bf41", "" }, ["license.txt"] = { "#d0bf41", "" },
-  ["makefile"] = { "#6d8086", "" },
-  ["meson.build"] = {"#6d8086", ""}, ["meson_options.txt"] = {"#6d8086", ""}, -- WIP: original icon needs adjustments
+  ["makefile"] = { "#6d8086", "" },
+  ["meson.build"] = {"#6d8086", ""}, ["meson_options.txt"] = {"#6d8086", ""}, -- WIP: original icon needs adjustments
   ["next.config.js"] = {"#000000", ""},
   ["package.json"] = {"#68A063", ""}, -- Node.js
   ["pkgbuild"] = {"#358fdd", ""}, -- Arch Linux PKGBUILD
