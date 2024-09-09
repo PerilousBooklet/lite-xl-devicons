@@ -68,7 +68,9 @@ local extension_icons = {
   [".erl"] = { "#A90533", "" }, [".hrl"] = { "#A90533", "" }, -- Erlang
   [".ex"] = { "#a074c4", "" }, [".exs"] = { "#a074c4", "" },  -- Elixir
   --[".f"] = {"#734796", ""}, [".F"] = {"#734796", ""}, [".f90"] = {"#734796", ""}, [".f95"] = {"#734796", ""}, [".f03"] = {"#734796", ""}, -- Fortran
+  --[".fs"] = {"#378BBA", ""}, -- F#
   [".go"] = { "#519aba", "" },
+  [".gd"] = { "#478CBF", "" }, -- Godot
   [".groovy"] = {"#357A93", ""}, [".gvy"] = {"#357A93", ""}, [".gy"] = {"#357A93", ""}, [".gsh"] = {"#357A93", ""},
   [".hs"] = {"#5E5086", ""}, -- Haskell
   [".html"] = { "#e34c26", "" }, [".html.erb"] = { "#e34c26", "" },
@@ -86,6 +88,7 @@ local extension_icons = {
   [".md"]  = { "#519aba", "" }, -- Markdown
   [".nim"] = { "#FFE953", "" }, [".nims"] = { "#FFE953", "" }, [".nimble"] = { "#FFE953", "" },
   [".nix"] = {"#7EB3DF", ""},
+  [".ml"] = { "#EE750A", "" }, -- OCaml
   [".odin"] = { "#3882D2", "" },
   [".php"] = { "#a074c4", "" },
   [".pl"] = { "#519aba", "" }, [".pm"] = { "#519aba", "" },  -- Perl
@@ -107,6 +110,7 @@ local extension_icons = {
   [".ts"] = { "#519aba", "" },  -- TypeScript
   --[".v"] = {"#536B8A", ""}, [".vv"] = {"#536B8A", ""}, [".vsh"] = {"#536B8A", ""}, -- V
   [".vala"] = { "#706296", "" },
+  [".vim"] = { "#8f00ff", "" },
   [".zig"] = { "#cbcb41", "" },
   [".wasm"] = {"#654EF0", ""}, -- WebAssembly
   [".xml"] = {"#005FAD", ""},
@@ -116,7 +120,6 @@ local extension_icons = {
   [".desktop"] = { "#6d8086", "" },
   [".fish"] = { "#ca2c92", "" },
   [".ini"] = { "#ffffff", "" },
-  [".vim"] = { "#8f00ff", "" },
 }
 
 local known_names_icons = {
@@ -130,11 +133,11 @@ local known_names_icons = {
   ["Cmakelists.txt"] = { "#0068C7", "" }, ["cmakelists.txt"] = { "#0068C7", "" },
   ["docker-compose.yml"] = { "#4289a1", "" },
   ["dockerfile"] = { "#296478", "" },
-  ["gradlew"] = { "#6d8086", "" }, ["gradlew.bat"] = { "#6d8086", "" }, -- Gradle
+  ["gradlew"] = { "#6d8086", "" }, ["gradlew.bat"] = { "#6d8086", "" },
   ["init.lua"] = { "#2d6496", "" },
   ["license"] = { "#d0bf41", "" }, ["license.txt"] = { "#d0bf41", "" },
-  ["makefile"] = { "#6d8086", "" },
-  ["meson.build"] = {"#6d8086", ""}, ["meson_options.txt"] = {"#6d8086", ""}, -- WIP: original icon needs adjustments
+  ["makefile"] = { "#6d8086", "" },
+  ["meson.build"] = {"#6d8086", ""}, ["meson_options.txt"] = {"#6d8086", ""},
   ["next.config.js"] = {"#000000", ""},
   ["package.json"] = {"#68A063", ""}, -- Node.js
   ["pkgbuild"] = {"#358fdd", ""}, -- Arch Linux PKGBUILD

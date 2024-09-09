@@ -6,7 +6,12 @@
       "version": "1.0.2",
       "mod_version": "3",
       "description": "Icons font for the devicons plugin.",
-      "path": "devicons.ttf"
+      "files": [
+        {
+          "url": "https://github.com/PerilousBooklet/lite-xl-devicons/raw/c0c31ff5e3611efd1913517a7dd148a9caed4bc4/devicons.ttf",
+          "checksum": "af0a81499ac09656e1f660867e59aec7680f5590312a5fe86247e1e6973d2524"
+        }
+      ]
     }, {
       "id": "devicons",
       "type": "plugin",

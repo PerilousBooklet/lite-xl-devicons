@@ -16,27 +16,18 @@ lpm repo add "https://github.com/PerilousBooklet/lite-xl-devicons"
 lpm install devicons
 ```
 
-## How to prepare svg icons to be added to the font
-WIP
+<!-- WIP: waiting for the toolbarview PR merge
+ -->
+## How to create a custom icon font
 
-## How to add a new entry to devicons.lua
-WIP
+Follow the official guide ...
 
-## How to add svg icons to the font
-Clone the repo somewhere on your system.
+## Sources
 
-Go to https://fontello.com/
-
-Drag and drop the .zip archive into the editor
-
-Drag and drop the desired svg icons into the editor:
-
-<img loading="lazy" width="400px" src="./images/fontello-editor.png" alt="image_name png" />
-
-Select the desired icons with the cursor.
-
-Go to the "Customize codes" menu, copy the glyph and paste it into a new entry inside `./plugins/devicons.lua`.
+- [VSCode File Icons](https://github.com/vscode-icons/vscode-icons/wiki/ListOfFiles)
+- [VSCode Language Syntax Files](https://github.com/microsoft/vscode/tree/main/extensions)
 
 ## Credits
 - https://github.com/yamatsum/nonicons
 - https://github.com/lite-xl/lite-xl-plugins/blob/master/plugins/nonicons.lua
+
