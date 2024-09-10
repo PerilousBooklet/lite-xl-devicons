@@ -53,8 +53,14 @@ local chevron_width = icon_font:get_width("") -- ?
 local previous_scale = SCALE
 
 local extension_icons = {
+  --[".f"] = {"#734796", ""}, [".F"] = {"#734796", ""}, [".f90"] = {"#734796", ""}, [".f95"] = {"#734796", ""}, [".f03"] = {"#734796", ""}, -- Fortran
+  --[".fs"] = {"#378BBA", ""}, -- F#
+  --[".j2"] = { "#02D0FF", "" }, -- J
+  --[".v"] = { "", "" }, -- Verilog -- FIXME: this extension conflicts with the same one for the V programming language
+  --[".v"] = {"#536B8A", ""}, [".vv"] = {"#536B8A", ""}, [".vsh"] = {"#536B8A", ""}, -- V
   [".asm"] = {"#DE002D", ""}, -- Assembly
   [".c"]   = { "#599eff", "" }, [".h"] = { "#599eff", "" },
+  [".cbl"] = { "#005CA5", "" }, [".cob"] = { "#005CA5", "" }, [".cpy"] = { "#005CA5", "" }, -- Cobol
   [".clj"] = {"#91DC47", ""}, -- Clojure
   [".conf"] = { "#6d8086", "" }, [".cfg"] = { "#6d8086", "" },
   [".cpp"] = { "#519aba", "" }, -- C++
@@ -67,15 +73,12 @@ local extension_icons = {
   [".elm"] = { "#519aba", "" },
   [".erl"] = { "#A90533", "" }, [".hrl"] = { "#A90533", "" }, -- Erlang
   [".ex"] = { "#a074c4", "" }, [".exs"] = { "#a074c4", "" },  -- Elixir
-  --[".f"] = {"#734796", ""}, [".F"] = {"#734796", ""}, [".f90"] = {"#734796", ""}, [".f95"] = {"#734796", ""}, [".f03"] = {"#734796", ""}, -- Fortran
-  --[".fs"] = {"#378BBA", ""}, -- F#
-  [".go"] = { "#519aba", "" },
   [".gd"] = { "#478CBF", "" }, -- Godot
+  [".go"] = { "#519aba", "" },
   [".groovy"] = {"#357A93", ""}, [".gvy"] = {"#357A93", ""}, [".gy"] = {"#357A93", ""}, [".gsh"] = {"#357A93", ""},
   [".hs"] = {"#5E5086", ""}, -- Haskell
   [".html"] = { "#e34c26", "" }, [".html.erb"] = { "#e34c26", "" },
   [".ino"] = {"#008184", ""}, -- Arduino
-  --[".j2"] = { "#02D0FF", "" }, -- J
   [".java"] = { "#cc3e44", "" },
   [".jl"] = {"#9359A5", ""}, -- Julia
   [".jpg"] = { "#a074c4", "" }, [".png"] = { "#a074c4", "" }, [".svg"] = { "#a074c4", "" },
@@ -86,9 +89,9 @@ local extension_icons = {
   [".lua"] = { "#51a0cf", "" },
   [".ly"] = {"#FC7DB0", ""}, -- Lilypond
   [".md"]  = { "#519aba", "" }, -- Markdown
+  [".ml"] = { "#EE750A", "" }, -- OCaml
   [".nim"] = { "#FFE953", "" }, [".nims"] = { "#FFE953", "" }, [".nimble"] = { "#FFE953", "" },
   [".nix"] = {"#7EB3DF", ""},
-  [".ml"] = { "#EE750A", "" }, -- OCaml
   [".odin"] = { "#3882D2", "" },
   [".php"] = { "#a074c4", "" },
   [".pl"] = { "#519aba", "" }, [".pm"] = { "#519aba", "" },  -- Perl
@@ -103,18 +106,18 @@ local extension_icons = {
   [".scala"] = { "#cc3e44", "" },
   [".sh"] = { "#4d5a5e", "" },  -- Shell
   [".sql"] = { "#C84431", "" },
+  [".sv"] = { "#1A348F", "" }, [".svh"] = { "#1A348F", "" }, -- System Verilog
   [".svelte"] = {"#FF3C00", ""},
   [".swift"] = { "#e37933", "" },
   [".tex"] = {"#467f22", ""}, [".sty"] = {"#467f22", ""}, [".cls"] = {"#467f22", ""}, [".dtx"] = {"#467f22", ""}, [".ins"] = {"#467f22", ""},
   [".toml"] = { "#6d8086", "" },
   [".ts"] = { "#519aba", "" },  -- TypeScript
-  --[".v"] = {"#536B8A", ""}, [".vv"] = {"#536B8A", ""}, [".vsh"] = {"#536B8A", ""}, -- V
   [".vala"] = { "#706296", "" },
   [".vim"] = { "#8f00ff", "" },
-  [".zig"] = { "#cbcb41", "" },
   [".wasm"] = {"#654EF0", ""}, -- WebAssembly
   [".xml"] = {"#005FAD", ""},
   [".yaml"] = { "#6d8086", "" }, [".yml"] = { "#6d8086", "" },
+  [".zig"] = { "#cbcb41", "" },
   -- Following without special icon:
   [".bash"] = { "#4169e1", "" },
   [".desktop"] = { "#6d8086", "" },
@@ -123,6 +126,8 @@ local extension_icons = {
 }
 
 local known_names_icons = {
+  --[""] = {"#61DBFB", ""}, -- React
+  --["postcss.config.js"] = {"#DD3A0A", ""}, [".postcssrc"] = {"#DD3A0A", ""},
   [".npmrc"] = {"#CC3534", ""},
   [".tmux.conf"] = { "#1BB91F", "" }, ["tmux.conf"] = { "#1BB91F", "" },
   ["alpine.config.js"] = {"#77C1D2", ""},
@@ -138,13 +143,11 @@ local known_names_icons = {
   ["license"] = { "#d0bf41", "" }, ["license.txt"] = { "#d0bf41", "" },
   ["makefile"] = { "#6d8086", "" },
   ["meson.build"] = {"#6d8086", ""}, ["meson_options.txt"] = {"#6d8086", ""},
+  -- Web dev framework configuration files
   ["next.config.js"] = {"#000000", ""},
   ["package.json"] = {"#68A063", ""}, -- Node.js
   ["pkgbuild"] = {"#358fdd", ""}, -- Arch Linux PKGBUILD
   ["readme.md"] = { "#72b886", "" }, ["readme"] = { "#72b886", "" },
-  -- Web dev framework configuration files
-  --["postcss.config.js"] = {"#DD3A0A", ""}, [".postcssrc"] = {"#DD3A0A", ""},
-  --[""] = {"#61DBFB", ""}, -- React
   ["schema.prisma"] = { "#2D3748", "" },
   ["setup.py"] = { "#559dd9", "" },
   ["svelte.config.js"] = {"#FF3C00", ""},
