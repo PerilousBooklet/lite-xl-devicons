@@ -53,11 +53,12 @@ local chevron_width = icon_font:get_width("") -- ?
 local previous_scale = SCALE
 
 local extension_icons = {
-  --[".f"] = {"#734796", ""}, [".F"] = {"#734796", ""}, [".f90"] = {"#734796", ""}, [".f95"] = {"#734796", ""}, [".f03"] = {"#734796", ""}, -- Fortran
-  --[".fs"] = {"#378BBA", ""}, -- F#
-  --[".j2"] = { "#02D0FF", "" }, -- J
-  --[".v"] = { "", "" }, -- Verilog -- FIXME: this extension conflicts with the same one for the V programming language
-  --[".v"] = {"#536B8A", ""}, [".vv"] = {"#536B8A", ""}, [".vsh"] = {"#536B8A", ""}, -- V
+  --[".f"] = {"#734796", ""}, [".F"] = {"#734796", ""}, [".f90"] = {"#734796", ""}, [".f95"] = {"#734796", ""}, [".f03"] = {"#734796", ""}, -- WIP: Fortran
+  --[".fs"] = {"#378BBA", ""}, -- WIP: F#
+  --[".j2"] = { "#02D0FF", "" }, -- WIP: J
+  -- FIX: the .v extension for Veriog conflicts with the one for the V programming language
+  --[".v"] = { "", "" }, -- WIP: Verilog
+  --[".v"] = {"#536B8A", ""}, [".vv"] = {"#536B8A", ""}, [".vsh"] = {"#536B8A", ""}, -- WIP: V
   [".asm"] = {"#DE002D", ""}, -- Assembly
   [".c"]   = { "#599eff", "" }, [".h"] = { "#599eff", "" },
   [".cbl"] = { "#005CA5", "" }, [".cob"] = { "#005CA5", "" }, [".cpy"] = { "#005CA5", "" }, -- Cobol
@@ -81,7 +82,11 @@ local extension_icons = {
   [".ino"] = {"#008184", ""}, -- Arduino
   [".java"] = { "#cc3e44", "" },
   [".jl"] = {"#9359A5", ""}, -- Julia
-  [".jpg"] = { "#a074c4", "" }, [".png"] = { "#a074c4", "" }, [".svg"] = { "#a074c4", "" },
+  [".jpg"] = { "#a074c4", "" }, [".png"] = { "#a074c4", "" }, [".svg"] = { "#a074c4", "" }, -- Images
+  -- WIP: Archive files
+  --[".zip"] = { "", "" }, [".gzip"] = { "", "" },
+  --[".tar"] = { "", "" }, [".tar.xz"] = { "", "" }, [".tar.gz"] = { "", "" },
+  --[".rar"] = { "", "" },
   [".js"] = { "#cbcb41", "" },  -- JavaScript
   [".json"] = { "#854CC7", "" },
   [".kt"] = { "#816EE4", "" }, [".kts"] = { "#816EE4", "" },  -- Kotlin
@@ -113,29 +118,29 @@ local extension_icons = {
   [".toml"] = { "#6d8086", "" },
   [".ts"] = { "#519aba", "" },  -- TypeScript
   [".vala"] = { "#706296", "" },
+  --[".vbs"] = { "", "" }, -- WIP: Visual Basic Scripting Edition
   [".vim"] = { "#8f00ff", "" },
   [".wasm"] = {"#654EF0", ""}, -- WebAssembly
   [".xml"] = {"#005FAD", ""},
   [".yaml"] = { "#6d8086", "" }, [".yml"] = { "#6d8086", "" },
   [".zig"] = { "#cbcb41", "" },
+  --[".cfg"] = { "#D29F2C", "" }, [".wfl"] = { "#D29F2C", "" }, -- Wesnoth Markup Language and Formula Language
+  -- Odd files
+  --[".crt"] = { "", "" }, -- WIP: Security Certificate File Format
   -- Following without special icon:
-  [".bash"] = { "#4169e1", "" },
+  [".bash"] = { "#4169e1", "" }, [".bat"] = { "#4169e1", "" }, [".ps1"] = { "#4169e1", "" }, -- Shells
+  [".reg"] = { "#52D4FB", "" }, -- Windows registry
   [".desktop"] = { "#6d8086", "" },
   [".fish"] = { "#ca2c92", "" },
   [".ini"] = { "#ffffff", "" },
 }
 
 local known_names_icons = {
-  --[""] = {"#61DBFB", ""}, -- React
-  --["postcss.config.js"] = {"#DD3A0A", ""}, [".postcssrc"] = {"#DD3A0A", ""},
-  [".npmrc"] = {"#CC3534", ""},
   [".tmux.conf"] = { "#1BB91F", "" }, ["tmux.conf"] = { "#1BB91F", "" },
-  ["alpine.config.js"] = {"#77C1D2", ""},
-  ["angular.json"] = {"#DE002D", ""},
   ["babel.config.json"] = {"#F9DC3E", ""}, [".babelrc.json"] = {"#F9DC3E", ""},
   ["build.zig"] = { "#6d8086", "" },
   ["changelog"] = { "#657175", "" }, ["changelog.txt"] = { "#4d5a5e", "" }, ["changelog.md"] = { "#519aba", "" },
-  ["Cmakelists.txt"] = { "#0068C7", "" }, ["cmakelists.txt"] = { "#0068C7", "" },
+  ["Cmakelists.txt"] = { "#0068C7", "" },
   ["docker-compose.yml"] = { "#4289a1", "" },
   ["dockerfile"] = { "#296478", "" },
   ["gradlew"] = { "#6d8086", "" }, ["gradlew.bat"] = { "#6d8086", "" },
@@ -143,13 +148,18 @@ local known_names_icons = {
   ["license"] = { "#d0bf41", "" }, ["license.txt"] = { "#d0bf41", "" },
   ["makefile"] = { "#6d8086", "" },
   ["meson.build"] = {"#6d8086", ""}, ["meson_options.txt"] = {"#6d8086", ""},
-  -- Web dev framework configuration files
-  ["next.config.js"] = {"#000000", ""},
-  ["package.json"] = {"#68A063", ""}, -- Node.js
   ["pkgbuild"] = {"#358fdd", ""}, -- Arch Linux PKGBUILD
   ["readme.md"] = { "#72b886", "" }, ["readme"] = { "#72b886", "" },
-  ["schema.prisma"] = { "#2D3748", "" },
   ["setup.py"] = { "#559dd9", "" },
+  -- Web dev
+  [".npmrc"] = {"#CC3534", ""},
+  ["alpine.config.js"] = {"#77C1D2", ""},
+  ["angular.json"] = {"#DE002D", ""},
+  ["next.config.js"] = {"#000000", ""},
+  ["package.json"] = {"#68A063", ""}, -- Node.js
+  --["postcss.config.js"] = {"#DD3A0A", ""}, [".postcssrc"] = {"#DD3A0A", ""}, -- WIP: PostCSS
+  --[""] = {"#61DBFB", ""}, -- WIP: React
+  ["schema.prisma"] = { "#2D3748", "" },
   ["svelte.config.js"] = {"#FF3C00", ""},
   ["tailwind.config.js"] = {"#38BDF8", ""},
   ["vue.config.js"] = {"#3FB984", ""},
