@@ -27,10 +27,10 @@ lpm install devicons
 
 Follow the official guide ...
 
-## Sources
-
-- [VSCode File Icons](https://github.com/vscode-icons/vscode-icons/wiki/ListOfFiles)
-- [VSCode Language Syntax Files](https://github.com/microsoft/vscode/tree/main/extensions)
+<!-- ## Sources -->
+<!-- WIP -->
+<!-- - [VSCode File Icons](https://github.com/vscode-icons/vscode-icons/wiki/ListOfFiles) -->
+<!-- - [VSCode Language Syntax Files](https://github.com/microsoft/vscode/tree/main/extensions) -->
 
 ## Credits
 - https://github.com/yamatsum/nonicons
