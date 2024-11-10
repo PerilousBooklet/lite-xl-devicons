@@ -4,10 +4,10 @@
 
 <img loading="lazy" width="1024px" src="./images/picture2.png" alt="image_name png" />
 
-## Supported programming languages
+<!-- ## Supported programming languages -->
 
-<!-- TODO: update link -->
-Check the [Lite XL IDE plugin page](https://github.com/lite-xl/lite-xl-ide-adam?tab=readme-ov-file#lite-xl-ide).
+<!-- <!-- TODO: update link --> -->
+<!-- Check the [Lite XL IDE plugin page](https://github.com/lite-xl/lite-xl-ide-adam?tab=readme-ov-file#lite-xl-ide). -->
 
 ## How to install
 
