@@ -25,7 +25,7 @@ lpm install devicons
  -->
 ## How to create a custom icon font
 
-Follow the official guide ...
+Follow the [official guide](https://lite-xl.com/developer-guide/samples/toolbarview/#create-a-custom-icon-font) ...
 
 <!-- ## Sources -->
 <!-- WIP -->
