@@ -55,119 +55,264 @@ local chevron_width = icon_font:get_width("") -- ?
 local previous_scale = SCALE
 
 local extension_icons = {
-  --[".f"] = {"#734796", ""}, [".F"] = {"#734796", ""}, [".f90"] = {"#734796", ""}, [".f95"] = {"#734796", ""}, [".f03"] = {"#734796", ""}, -- WIP: Fortran
-  --[".fs"] = {"#378BBA", ""}, -- WIP: F#
-  --[".j2"] = { "#02D0FF", "" }, -- WIP: J
-  -- FIX: the .v extension for Veriog conflicts with the one for the V programming language
-  --[".v"] = { "", "" }, -- WIP: Verilog
-  --[".v"] = {"#536B8A", ""}, [".vv"] = {"#536B8A", ""}, [".vsh"] = {"#536B8A", ""}, -- WIP: V
-  [".asm"] = {"#DE002D", ""}, -- Assembly
-  [".c"]   = { "#599eff", "" }, [".cc"]   = { "#599eff", "" }, [".h"] = { "#599eff", "" },
-  [".cbl"] = { "#005CA5", "" }, [".cob"] = { "#005CA5", "" }, [".cpy"] = { "#005CA5", "" }, -- Cobol
-  [".clj"] = {"#91DC47", ""}, [".cljc"] = {"#91DC47", ""}, [".cljs"] = {"#91DC47", ""},-- Clojure
-  [".conf"] = { "#6d8086", "" }, [".cfg"] = { "#6d8086", "" },
-  [".cpp"] = { "#519aba", "" }, -- C++
-  [".cr"] = { "#000000", "" }, -- Crystal
-  [".cs"] = { "#596706", "" },  -- C#
-  [".css"] = { "#563d7c", "" }, [".module.css"] = { "#563d7c", "" },
-  [".d"] = {"#B03931", ""}, [".di"] = {"#B03931", ""}, -- D
+  -- Arduino
+  [".ino"] = {"#008184", ""},
+  -- Assembly
+  [".asm"] = {"#DE002D", ""},
+  -- C
+  [".c"] = { "#599eff", "" }, 
+  [".cc"] = { "#599eff", "" }, 
+  [".h"] = { "#599eff", "" },
+  -- Cobol
+  [".cbl"] = { "#005CA5", "" }, 
+  [".cob"] = { "#005CA5", "" }, 
+  [".cpy"] = { "#005CA5", "" },
+  -- Clojure
+  [".clj"] = {"#91DC47", ""}, 
+  [".cljc"] = {"#91DC47", ""}, 
+  [".cljs"] = {"#91DC47", ""},
+  -- ?
+  [".conf"] = { "#6d8086", "" }, 
+  [".cfg"] = { "#6d8086", "" },
+  -- C++
+  [".cpp"] = { "#519aba", "" },
+  -- Crystal
+  [".cr"] = { "#000000", "" },
+  -- C#
+  [".cs"] = { "#596706", "" },
+  -- CSS
+  [".css"] = { "#563d7c", "" }, 
+  [".module.css"] = { "#563d7c", "" },
+  [".sass"] = {"#CF649A", ""},
+  [".scss"] = {"#CF649A", ""},
+  -- D
+  [".d"] = {"#B03931", ""}, 
+  [".di"] = {"#B03931", ""},
+  
+  -- Dart
   [".dart"] = {"#055A9C", ""},
+  -- diff
   [".diff"] = { "#41535b", "" },
+  -- Elm
   [".elm"] = { "#519aba", "" },
-  [".erl"] = { "#A90533", "" }, [".hrl"] = { "#A90533", "" }, -- Erlang
-  [".ex"] = { "#a074c4", "" }, [".exs"] = { "#a074c4", "" },  -- Elixir
-  [".fs"] = { "#34B9D9", "" }, [".fsi"] = { "#34B9D9", "" }, [".fsx"] = { "#34B9D9", "" }, [".fsscript"] = { "#34B9D9", "" }, -- F#
-  [".gd"] = { "#478CBF", "" }, -- Godot
+  -- Erlang
+  [".erl"] = { "#A90533", "" }, 
+  [".hrl"] = { "#A90533", "" },
+  -- Elixir
+  [".ex"] = { "#a074c4", "" }, 
+  [".exs"] = { "#a074c4", "" },
+  -- F#
+  [".fs"] = { "#34B9D9", "" }, 
+  [".fsi"] = { "#34B9D9", "" }, 
+  [".fsx"] = { "#34B9D9", "" }, 
+  [".fsscript"] = { "#34B9D9", "" },
+  -- WIP: Fortran
+  -- [".f"] = {"#734796", ""},
+  -- [".F"] = {"#734796", ""},
+  -- [".f90"] = {"#734796", ""},
+  -- [".f95"] = {"#734796", ""},
+  -- [".f03"] = {"#734796", ""},
+  -- Godot
+  [".gd"] = { "#478CBF", "" },
+  -- Go
   [".go"] = { "#519aba", "" },
-  [".groovy"] = {"#357A93", ""}, [".gvy"] = {"#357A93", ""}, [".gy"] = {"#357A93", ""}, [".gsh"] = {"#357A93", ""},
-  [".hs"] = {"#5E5086", ""}, -- Haskell
-  [".html"] = { "#e34c26", "" }, [".html.erb"] = { "#e34c26", "" },
-  [".ino"] = {"#008184", ""}, -- Arduino
+  -- Groovy
+  [".groovy"] = {"#357A93", ""}, 
+  [".gvy"] = {"#357A93", ""}, 
+  [".gy"] = {"#357A93", ""}, 
+  [".gsh"] = {"#357A93", ""},
+  -- Haskell
+  [".hs"] = {"#5E5086", ""},
+  -- HTML
+  [".html"] = { "#e34c26", "" }, 
+  [".html.erb"] = { "#e34c26", "" },
+  -- WIP: J
+  -- [".j2"] = { "#02D0FF", "" },
+  -- Java
   [".java"] = { "#cc3e44", "" },
-  [".jl"] = {"#9359A5", ""}, -- Julia
-  [".jpg"] = { "#a074c4", "" }, [".png"] = { "#a074c4", "" }, [".svg"] = { "#a074c4", "" }, -- Images
+  -- Julia
+  [".jl"] = {"#9359A5", ""},
+  -- Images
+  [".jpg"] = { "#a074c4", "" }, 
+  [".png"] = { "#a074c4", "" }, 
+  [".svg"] = { "#a074c4", "" },
   -- WIP: Archive files
-  --[".zip"] = { "", "" }, [".gzip"] = { "", "" },
-  --[".tar"] = { "", "" }, [".tar.xz"] = { "", "" }, [".tar.gz"] = { "", "" },
-  --[".rar"] = { "", "" },
-  [".js"] = { "#cbcb41", "" },  -- JavaScript
+  -- [".zip"] = { "", "" }, 
+  -- [".gzip"] = { "", "" },
+  -- [".tar"] = { "", "" }, 
+  -- [".tar.xz"] = { "", "" }, 
+  -- [".tar.gz"] = { "", "" },
+  -- [".rar"] = { "", "" },
+  -- Javascript
+  [".js"] = { "#cbcb41", "" },
+  -- JSON
   [".json"] = { "#854CC7", "" },
-  [".kt"] = { "#816EE4", "" }, [".kts"] = { "#816EE4", "" },  -- Kotlin
-  [".lisp"] = { "#FFFFFF", "" }, [".lsp"] = { "#FFFFFF", "" },
+  -- Kotlin
+  [".kt"] = { "#816EE4", "" }, 
+  [".kts"] = { "#816EE4", "" },
+  -- Lisp
+  [".lisp"] = { "#FFFFFF", "" }, 
+  [".lsp"] = { "#FFFFFF", "" },
+  -- Lua
   [".lua"] = { "#51a0cf", "" },
-  [".ly"] = {"#FC7DB0", ""}, -- Lilypond
-  [".md"]  = { "#519aba", "" }, -- Markdown
-  [".ml"] = { "#EE750A", "" }, -- OCaml
-  [".nim"] = { "#FFE953", "" }, [".nims"] = { "#FFE953", "" }, [".nimble"] = { "#FFE953", "" },
+  -- Lilypond
+  [".ly"] = {"#FC7DB0", ""},
+  -- Markdown
+  [".md"] = { "#519aba", "" },
+  -- Ocaml
+  [".ml"] = { "#EE750A", "" },
+  -- Nim
+  [".nim"] = { "#FFE953", "" }, 
+  [".nims"] = { "#FFE953", "" }, 
+  [".nimble"] = { "#FFE953", "" },
+  -- Nix
   [".nix"] = {"#7EB3DF", ""},
+  -- Odin
   [".odin"] = { "#3882D2", "" },
+  -- PHP
   [".php"] = { "#a074c4", "" },
-  [".pl"] = { "#519aba", "" }, [".pm"] = { "#519aba", "" },  -- Perl
-  [".py"]  = { "#3572A5", "" }, [".pyc"]  = { "#519aba", "" }, [".pyd"]  = { "#519aba", "" }, -- Python
-  [".rpy"]  = { "#3572A5", "" }, [".rpyc"]  = { "#519aba", "" }, -- RenPy
-  [".r"] = { "#358a5b", "" }, [".R"] = { "#358a5b", "" },
+  -- Perl
+  [".pl"] = { "#519aba", "" }, 
+  [".pm"] = { "#519aba", "" },
+  -- Python
+  [".py"] = { "#3572A5", "" }, 
+  [".pyc"] = { "#519aba", "" }, 
+  [".pyd"] = { "#519aba", "" },
+  [".rpy"] = { "#3572A5", "" }, 
+  [".rpyc"] = { "#519aba", "" },
+  -- R
+  [".r"] = { "#358a5b", "" }, 
+  [".R"] = { "#358a5b", "" },
+  -- Rake
   [".rake"] = { "#701516", "" },
-  [".rb"] = { "#701516", "" },  -- Ruby
-  [".rs"] = { "#dea584", "" },  -- Rust
+  -- Ruby
+  [".rb"] = { "#701516", "" },
+  -- Rust
+  [".rs"] = { "#dea584", "" },
+  -- RSS
   [".rss"] = { "#cc3e44", "" },
-  [".sass"] = {"#CF649A", ""}, [".scss"] = {"#CF649A", ""},
-  [".scad"] = {"#e8b829", ""}, -- OpenSCAD
+  -- OpenSCAD
+  [".scad"] = {"#e8b829", ""},
+  -- Scala
   [".scala"] = { "#cc3e44", "" },
-  [".sh"] = { "#4d5a5e", "" },  -- Shell
-  [".sql"] = { "#C84431", "" },
-  [".sv"] = { "#1A348F", "" }, [".svh"] = { "#1A348F", "" }, -- System Verilog
-  [".svelte"] = {"#FF3C00", ""},
-  [".swift"] = { "#e37933", "" },
-  [".tex"] = {"#467f22", ""}, [".sty"] = {"#467f22", ""}, [".cls"] = {"#467f22", ""}, [".dtx"] = {"#467f22", ""}, [".ins"] = {"#467f22", ""},
-  [".toml"] = { "#6d8086", "" },
-  [".ts"] = { "#519aba", "" },  -- TypeScript
-  [".vala"] = { "#706296", "" },
-  --[".vbs"] = { "", "" }, -- WIP: Visual Basic Scripting Edition
-  [".v"] = { "#536B88", "" }, [".vsh"] = { "#536B88", "" }, -- Vlang
-  [".vim"] = { "#8f00ff", "" },
-  [".wasm"] = {"#654EF0", ""}, -- WebAssembly
-  [".xml"] = {"#005FAD", ""},
-  [".yaml"] = { "#6d8086", "" }, [".yml"] = { "#6d8086", "" },
-  [".zig"] = { "#cbcb41", "" },
-  [".cfg"] = { "#D29F2C", "" }, [".wfl"] = { "#D29F2C", "" }, -- Wesnoth Markup Language and Formula Language
-  -- Odd files
-  --[".crt"] = { "", "" }, -- WIP: Security Certificate File Format
-  -- Following without special icon:
-  [".bash"] = { "#4169e1", "" }, [".bat"] = { "#4169e1", "" }, [".ps1"] = { "#4169e1", "" }, -- Shells
-  [".reg"] = { "#52D4FB", "" }, -- Windows registry
-  [".desktop"] = { "#6d8086", "" },
+  -- Shell
+  [".sh"] = { "#4d5a5e", "" },
+  [".bash"] = { "#4169e1", "" },
+  [".bat"] = { "#4169e1", "" },
+  [".ps1"] = { "#4169e1", "" },
   [".fish"] = { "#ca2c92", "" },
+  -- SQL
+  [".sql"] = { "#C84431", "" },
+  -- System Verilog
+  [".sv"] = { "#1A348F", "" }, 
+  [".svh"] = { "#1A348F", "" },
+  -- Svelte
+  [".svelte"] = {"#FF3C00", ""},
+  -- Swift
+  [".swift"] = { "#e37933", "" },
+  -- LaTeX
+  [".tex"] = {"#467f22", ""},
+  [".sty"] = {"#467f22", ""},
+  [".cls"] = {"#467f22", ""},
+  [".dtx"] = {"#467f22", ""},
+  [".ins"] = {"#467f22", ""},
+  -- TOMl
+  [".toml"] = { "#6d8086", "" },
+  -- Typescript
+  [".ts"] = { "#519aba", "" },
+  -- V
+  [".v"] = { "#536B88", "" }, [".vsh"] = { "#536B88", "" },
+  -- Vala
+  [".vala"] = { "#706296", "" },
+  -- WIP: Verilog
+  -- FIX: the .v extension for Verilog conflicts with the one for the V language
+  -- [".v"] = { "", "" },
+  -- WIP: Visual Basic Scripting Edition
+  -- [".vbs"] = { "", "" },
+  -- Vim
+  [".vim"] = { "#8f00ff", "" },
+  -- WebAssembly
+  [".wasm"] = {"#654EF0", ""},
+  -- XML
+  [".xml"] = {"#005FAD", ""},
+  -- YAML
+  [".yaml"] = { "#6d8086", "" },
+  [".yml"] = { "#6d8086", "" },
+  -- Zig
+  [".zig"] = { "#cbcb41", "" },
+  -- Wesnoth Markup Language Language
+  [".wfl"] = { "#D29F2C", "" },
+  -- WIP: Security Certificate File Format for Windows
+  --[".crt"] = { "", "" },
+  -- Windows registry
+  [".reg"] = { "#52D4FB", "" },
+  -- Desktop
+  [".desktop"] = { "#6d8086", "" },
+  -- INI
   [".ini"] = { "#ffffff", "" },
 }
 
 local known_names_icons = {
-  [".tmux.conf"] = { "#1BB91F", "" }, ["tmux.conf"] = { "#1BB91F", "" },
-  ["babel.config.json"] = {"#F9DC3E", ""}, [".babelrc.json"] = {"#F9DC3E", ""},
-  ["build.zig"] = { "#6d8086", "" },
-  ["changelog"] = { "#657175", "" }, ["changelog.txt"] = { "#4d5a5e", "" }, ["changelog.md"] = { "#519aba", "" },
+  -- Alpine.js
+  ["alpine.config.js"] = {"#77C1D2", ""},
+  -- Angular
+  ["angular.json"] = {"#DE002D", ""},
+  -- Arch Linux
+  ["pkgbuild"] = {"#358fdd", ""},
+  -- Babel
+  ["babel.config.json"] = {"#F9DC3E", ""},
+  [".babelrc.json"] = {"#F9DC3E", ""},
+  -- Changelog
+  ["changelog"] = { "#657175", "" },
+  ["changelog.txt"] = { "#4d5a5e", "" },
+  ["changelog.md"] = { "#519aba", "" },
+  -- Cmake
   ["Cmakelists.txt"] = { "#0068C7", "" },
+  -- Docker
   ["docker-compose.yml"] = { "#4289a1", "" },
   ["dockerfile"] = { "#296478", "" },
-  ["gradlew"] = { "#6d8086", "" }, ["gradlew.bat"] = { "#6d8086", "" },
+  -- Gradle
+  ["gradlew"] = { "#6d8086", "" },
+  ["gradlew.bat"] = { "#6d8086", "" },
+  -- License
+  ["license"] = { "#d0bf41", "" },
+  ["license.txt"] = { "#d0bf41", "" },
+  -- Lite XL
   ["init.lua"] = { "#2d6496", "" },
-  ["license"] = { "#d0bf41", "" }, ["license.txt"] = { "#d0bf41", "" },
+  -- Make
   ["makefile"] = { "#6d8086", "" },
-  ["meson.build"] = {"#6d8086", ""}, ["meson_options.txt"] = {"#6d8086", ""},
-  ["pkgbuild"] = {"#358fdd", ""}, -- Arch Linux PKGBUILD
-  ["readme.md"] = { "#72b886", "" }, ["readme"] = { "#72b886", "" },
-  ["setup.py"] = { "#559dd9", "" },
-  -- Web dev
-  [".npmrc"] = {"#CC3534", ""},
-  ["alpine.config.js"] = {"#77C1D2", ""},
-  ["angular.json"] = {"#DE002D", ""},
+  -- Meson
+  ["meson.build"] = {"#6d8086", ""},
+  ["meson_options.txt"] = {"#6d8086", ""},
+  -- Next.js
   ["next.config.js"] = {"#000000", ""},
-  ["package.json"] = {"#68A063", ""}, -- Node.js
-  --["postcss.config.js"] = {"#DD3A0A", ""}, [".postcssrc"] = {"#DD3A0A", ""}, -- WIP: PostCSS
-  --[""] = {"#61DBFB", ""}, -- WIP: React
+  -- Node.js
+  ["package.json"] = {"#68A063", ""},
+  -- NPM
+  [".npmrc"] = {"#CC3534", ""},
+  -- WIP: PostCSS
+  -- ["postcss.config.js"] = {"#DD3A0A", ""},
+  -- [".postcssrc"] = {"#DD3A0A", ""},
+  -- Prisma
   ["schema.prisma"] = { "#2D3748", "" },
+  -- Python
+  ["setup.py"] = { "#559dd9", "" },
+  -- WIP: React
+  -- [""] = {"#61DBFB", ""},
+  -- README
+  ["readme.md"] = { "#72b886", "" },
+  ["readme"] = { "#72b886", "" },
+  -- Svelte
   ["svelte.config.js"] = {"#FF3C00", ""},
+  -- Tailwind
   ["tailwind.config.js"] = {"#38BDF8", ""},
+  -- Tmux
+  [".tmux.conf"] = { "#1BB91F", "" },
+  ["tmux.conf"] = { "#1BB91F", "" },
+  -- Vue
   ["vue.config.js"] = {"#3FB984", ""},
+  -- Zig
+  ["build.zig"] = { "#6d8086", "" },
 }
 
 -- Preparing colors
