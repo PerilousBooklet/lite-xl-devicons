@@ -2,8 +2,6 @@
 -- Author: PerilousBooklet (forked from Jipok's nonicons.lua)
 -- Doesn't work well with scaling mode == "ui"
 
--- FIX: begin from ac28a3fa91280578b992c7a88c19499cb138232f to fix the new icons not showing properly
-
 local common = require "core.common"
 local config = require "core.config"
 local style = require "core.style"
