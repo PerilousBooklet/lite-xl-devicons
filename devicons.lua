@@ -2,6 +2,8 @@
 -- Author: PerilousBooklet (forked from Jipok's nonicons.lua)
 -- Doesn't work well with scaling mode == "ui"
 
+-- FIX: begin from ac28a3fa91280578b992c7a88c19499cb138232f to fix the new icons not showing properly
+
 local common = require "core.common"
 local config = require "core.config"
 local style = require "core.style"
@@ -60,9 +62,9 @@ local extension_icons = {
   --[".v"] = { "", "" }, -- WIP: Verilog
   --[".v"] = {"#536B8A", ""}, [".vv"] = {"#536B8A", ""}, [".vsh"] = {"#536B8A", ""}, -- WIP: V
   [".asm"] = {"#DE002D", ""}, -- Assembly
-  [".c"]   = { "#599eff", "" }, [".h"] = { "#599eff", "" },
+  [".c"]   = { "#599eff", "" }, [".cc"]   = { "#599eff", "" }, [".h"] = { "#599eff", "" },
   [".cbl"] = { "#005CA5", "" }, [".cob"] = { "#005CA5", "" }, [".cpy"] = { "#005CA5", "" }, -- Cobol
-  [".clj"] = {"#91DC47", ""}, -- Clojure
+  [".clj"] = {"#91DC47", ""}, [".cljc"] = {"#91DC47", ""}, [".cljs"] = {"#91DC47", ""},-- Clojure
   [".conf"] = { "#6d8086", "" }, [".cfg"] = { "#6d8086", "" },
   [".cpp"] = { "#519aba", "" }, -- C++
   [".cr"] = { "#000000", "" }, -- Crystal
@@ -74,6 +76,7 @@ local extension_icons = {
   [".elm"] = { "#519aba", "" },
   [".erl"] = { "#A90533", "" }, [".hrl"] = { "#A90533", "" }, -- Erlang
   [".ex"] = { "#a074c4", "" }, [".exs"] = { "#a074c4", "" },  -- Elixir
+  [".fs"] = { "#34B9D9", "" }, [".fsi"] = { "#34B9D9", "" }, [".fsx"] = { "#34B9D9", "" }, [".fsscript"] = { "#34B9D9", "" }, -- F#
   [".gd"] = { "#478CBF", "" }, -- Godot
   [".go"] = { "#519aba", "" },
   [".groovy"] = {"#357A93", ""}, [".gvy"] = {"#357A93", ""}, [".gy"] = {"#357A93", ""}, [".gsh"] = {"#357A93", ""},
@@ -101,6 +104,7 @@ local extension_icons = {
   [".php"] = { "#a074c4", "" },
   [".pl"] = { "#519aba", "" }, [".pm"] = { "#519aba", "" },  -- Perl
   [".py"]  = { "#3572A5", "" }, [".pyc"]  = { "#519aba", "" }, [".pyd"]  = { "#519aba", "" }, -- Python
+  [".rpy"]  = { "#3572A5", "" }, [".rpyc"]  = { "#519aba", "" }, -- RenPy
   [".r"] = { "#358a5b", "" }, [".R"] = { "#358a5b", "" },
   [".rake"] = { "#701516", "" },
   [".rb"] = { "#701516", "" },  -- Ruby
@@ -114,17 +118,18 @@ local extension_icons = {
   [".sv"] = { "#1A348F", "" }, [".svh"] = { "#1A348F", "" }, -- System Verilog
   [".svelte"] = {"#FF3C00", ""},
   [".swift"] = { "#e37933", "" },
-  [".tex"] = {"#467f22", ""}, [".sty"] = {"#467f22", ""}, [".cls"] = {"#467f22", ""}, [".dtx"] = {"#467f22", ""}, [".ins"] = {"#467f22", ""},
+  [".tex"] = {"#467f22", ""}, [".sty"] = {"#467f22", ""}, [".cls"] = {"#467f22", ""}, [".dtx"] = {"#467f22", ""}, [".ins"] = {"#467f22", ""},
   [".toml"] = { "#6d8086", "" },
   [".ts"] = { "#519aba", "" },  -- TypeScript
   [".vala"] = { "#706296", "" },
   --[".vbs"] = { "", "" }, -- WIP: Visual Basic Scripting Edition
+  [".v"] = { "#536B88", "" }, [".vsh"] = { "#536B88", "" }, -- Vlang
   [".vim"] = { "#8f00ff", "" },
   [".wasm"] = {"#654EF0", ""}, -- WebAssembly
   [".xml"] = {"#005FAD", ""},
   [".yaml"] = { "#6d8086", "" }, [".yml"] = { "#6d8086", "" },
   [".zig"] = { "#cbcb41", "" },
-  --[".cfg"] = { "#D29F2C", "" }, [".wfl"] = { "#D29F2C", "" }, -- Wesnoth Markup Language and Formula Language
+  [".cfg"] = { "#D29F2C", "" }, [".wfl"] = { "#D29F2C", "" }, -- Wesnoth Markup Language and Formula Language
   -- Odd files
   --[".crt"] = { "", "" }, -- WIP: Security Certificate File Format
   -- Following without special icon:
