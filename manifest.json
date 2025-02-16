@@ -8,8 +8,8 @@
       "description": "Icons font for the devicons plugin.",
       "files": [
         {
-          "url": "https://github.com/PerilousBooklet/lite-xl-devicons/raw/5217199fa9dde3210804282e417135ad87984f19/fontello-d5bd64c9/font/devicons.ttf",
-          "checksum": "64ba7035cb9a2866e5b8062bd49614845345dab40787e28dad6e93e1546f599f"
+          "url": "https://github.com/PerilousBooklet/lite-xl-devicons/raw/refs/heads/main/fontello-b9ad42d0/font/devicons.ttf",
+          "checksum": "8ae379cf85012347408ca18c9452e9b0467dda4bcb31465ab925a197b9638997"
         }
       ]
     }, {
