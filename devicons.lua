@@ -201,13 +201,13 @@ local extension_icons = {
   [".fish"] = { "#ca2c92", "" },
   -- SQL
   [".sql"] = { "#C84431", "" },
-  -- System Verilog
-  [".sv"] = { "#1A348F", "" }, 
-  [".svh"] = { "#1A348F", "" },
   -- Svelte
   [".svelte"] = {"#FF3C00", ""},
   -- Swift
   [".swift"] = { "#e37933", "" },
+  -- System Verilog
+  [".sv"] = { "#1A348F", "" }, 
+  [".svh"] = { "#1A348F", "" },
   -- LaTeX
   [".tex"] = {"#467f22", ""},
   [".sty"] = {"#467f22", ""},
