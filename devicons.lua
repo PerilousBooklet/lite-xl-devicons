@@ -230,8 +230,8 @@ local extension_icons = {
   -- Vim
   [".vim"] = { "#8f00ff", "" },
   -- Visual Basic
-  [".vb"] = { "#1A5F94", "" },
-  [".vbs"] = { "#1A5F94", "" },
+  [".vb"] = { "#1A5F94", "" },
+  [".vbs"] = { "#1A5F94", "" },
   -- WebAssembly
   [".wasm"] = {"#654EF0", ""},
   -- XML
