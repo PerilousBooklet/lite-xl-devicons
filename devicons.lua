@@ -104,12 +104,12 @@ local extension_icons = {
   [".fsi"] = { "#34B9D9", "" }, 
   [".fsx"] = { "#34B9D9", "" }, 
   [".fsscript"] = { "#34B9D9", "" },
-  -- WIP: Fortran
-  -- [".f"] = {"#734796", ""},
-  -- [".F"] = {"#734796", ""},
-  -- [".f90"] = {"#734796", ""},
-  -- [".f95"] = {"#734796", ""},
-  -- [".f03"] = {"#734796", ""},
+  -- Fortran
+  [".f"] = {"#734796", ""},
+  [".F"] = {"#734796", ""},
+  [".f90"] = {"#734796", ""},
+  [".f95"] = {"#734796", ""},
+  [".f03"] = {"#734796", ""},
   -- Godot
   [".gd"] = { "#478CBF", "" },
   -- Go
@@ -167,11 +167,17 @@ local extension_icons = {
   [".nix"] = {"#7EB3DF", ""},
   -- Odin
   [".odin"] = { "#3882D2", "" },
-  -- PHP
-  [".php"] = { "#a074c4", "" },
   -- Perl
   [".pl"] = { "#519aba", "" }, 
   [".pm"] = { "#519aba", "" },
+  -- PHP
+  [".php"] = { "#a074c4", "" },
+  -- PlantUML
+  [".puml"] = { "#FABD14", "" },
+  [".plantuml"] = { "#FABD14", "" },
+  [".iuml"] = { "#FABD14", "" },
+  [".pu"] = { "#FABD14", "" },
+  [".wsd"] = { "#FABD14", "" },
   -- Python
   [".py"] = { "#3572A5", "" }, 
   [".pyc"] = { "#519aba", "" }, 
@@ -208,12 +214,6 @@ local extension_icons = {
   -- System Verilog
   [".sv"] = { "#1A348F", "" }, 
   [".svh"] = { "#1A348F", "" },
-  -- LaTeX
-  [".tex"] = {"#467f22", ""},
-  [".sty"] = {"#467f22", ""},
-  [".cls"] = {"#467f22", ""},
-  [".dtx"] = {"#467f22", ""},
-  [".ins"] = {"#467f22", ""},
   -- TOMl
   [".toml"] = { "#6d8086", "" },
   -- Typescript
@@ -229,6 +229,9 @@ local extension_icons = {
   -- [".vbs"] = { "", "" },
   -- Vim
   [".vim"] = { "#8f00ff", "" },
+  -- Visual Basic
+  [".vb"] = { "#1A5F94", "" },
+  [".vbs"] = { "#1A5F94", "" },
   -- WebAssembly
   [".wasm"] = {"#654EF0", ""},
   -- XML
@@ -272,6 +275,12 @@ local known_names_icons = {
   -- Gradle
   ["gradlew"] = { "#6d8086", "" },
   ["gradlew.bat"] = { "#6d8086", "" },
+  -- LaTeX
+  [".tex"] = {"#467f22", ""},
+  [".sty"] = {"#467f22", ""},
+  [".cls"] = {"#467f22", ""},
+  [".dtx"] = {"#467f22", ""},
+  [".ins"] = {"#467f22", ""},
   -- License
   ["license"] = { "#d0bf41", "" },
   ["license.txt"] = { "#d0bf41", "" },
@@ -288,15 +297,13 @@ local known_names_icons = {
   ["package.json"] = {"#68A063", ""},
   -- NPM
   [".npmrc"] = {"#CC3534", ""},
-  -- WIP: PostCSS
-  -- ["postcss.config.js"] = {"#DD3A0A", ""},
-  -- [".postcssrc"] = {"#DD3A0A", ""},
+  -- PostCSS
+  ["postcss.config.js"] = {"#DD3A0A", ""},
+  [".postcssrc"] = {"#DD3A0A", ""},
   -- Prisma
   ["schema.prisma"] = { "#2D3748", "" },
   -- Python
   ["setup.py"] = { "#559dd9", "" },
-  -- WIP: React
-  -- [""] = {"#61DBFB", ""},
   -- README
   ["readme.md"] = { "#72b886", "" },
   ["readme"] = { "#72b886", "" },

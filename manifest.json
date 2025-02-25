@@ -3,19 +3,19 @@
     {
       "id": "font_devicons",
       "type": "font",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "mod_version": "3",
       "description": "Icons font for the devicons plugin.",
       "files": [
         {
-          "url": "https://github.com/PerilousBooklet/lite-xl-devicons/raw/refs/heads/main/fontello-b9ad42d0/font/devicons.ttf",
+          "url": "https://github.com/PerilousBooklet/lite-xl-devicons/raw/refs/heads/main/fontello-5ddc8486/font/devicons.ttf",
           "checksum": "8ae379cf85012347408ca18c9452e9b0467dda4bcb31465ab925a197b9638997"
         }
       ]
     }, {
       "id": "devicons",
       "type": "plugin",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "mod_version": "3",
       "description": "PerilousBooklet's treeview icons for software developers.",
       "path": "devicons.lua",

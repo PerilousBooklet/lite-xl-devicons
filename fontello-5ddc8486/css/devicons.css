@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'devicons';
-  src: url('../font/devicons.eot?28452132');
-  src: url('../font/devicons.eot?28452132#iefix') format('embedded-opentype'),
-       url('../font/devicons.woff2?28452132') format('woff2'),
-       url('../font/devicons.woff?28452132') format('woff'),
-       url('../font/devicons.ttf?28452132') format('truetype'),
-       url('../font/devicons.svg?28452132#devicons') format('svg');
+  src: url('../font/devicons.eot?12902488');
+  src: url('../font/devicons.eot?12902488#iefix') format('embedded-opentype'),
+       url('../font/devicons.woff2?12902488') format('woff2'),
+       url('../font/devicons.woff?12902488') format('woff'),
+       url('../font/devicons.ttf?12902488') format('truetype'),
+       url('../font/devicons.svg?12902488#devicons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'devicons';
-    src: url('../font/devicons.svg?28452132#devicons') format('svg');
+    src: url('../font/devicons.svg?12902488#devicons') format('svg');
   }
 }
 */
@@ -459,3 +459,7 @@
 .icon-latex-new:before { content: '\e992'; } /* '' */
 .icon-v:before { content: '\e993'; } /* '' */
 .icon-wesnoth:before { content: '\e994'; } /* '' */
+.icon-fortran:before { content: '\e995'; } /* '' */
+.icon-uml:before { content: '\e996'; } /* '' */
+.icon-vb.net_logo:before { content: '\e997'; } /* '' */
+.icon-postcss:before { content: '\e999'; } /* '' */

@@ -415,3 +415,7 @@
 .icon-latex-new { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe992;&nbsp;'); }
 .icon-v { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe993;&nbsp;'); }
 .icon-wesnoth { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe994;&nbsp;'); }
+.icon-fortran { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe995;&nbsp;'); }
+.icon-uml { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe996;&nbsp;'); }
+.icon-vb.net_logo { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe997;&nbsp;'); }
+.icon-postcss { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe999;&nbsp;'); }
