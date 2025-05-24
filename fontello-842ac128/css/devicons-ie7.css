@@ -418,4 +418,6 @@
 .icon-fortran { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe995;&nbsp;'); }
 .icon-uml { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe996;&nbsp;'); }
 .icon-vb.net_logo { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe997;&nbsp;'); }
+.icon-gradle { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe998;&nbsp;'); }
 .icon-postcss { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe999;&nbsp;'); }
+.icon-arduino { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe99a;&nbsp;'); }

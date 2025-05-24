@@ -54,7 +54,7 @@ local previous_scale = SCALE
 
 local extension_icons = {
   -- Arduino
-  [".ino"] = {"#008184", ""},
+  [".ino"] = {"#008184", ""},
   -- Assembly
   [".asm"] = {"#DE002D", ""},
   -- C
@@ -173,11 +173,11 @@ local extension_icons = {
   -- PHP
   [".php"] = { "#a074c4", "" },
   -- PlantUML
-  [".puml"] = { "#FABD14", "" },
-  [".plantuml"] = { "#FABD14", "" },
-  [".iuml"] = { "#FABD14", "" },
-  [".pu"] = { "#FABD14", "" },
-  [".wsd"] = { "#FABD14", "" },
+  [".puml"] = { "#cc3e44", "" },
+  [".plantuml"] = { "#cc3e44", "" },
+  [".iuml"] = { "#cc3e44", "" },
+  [".pu"] = { "#cc3e44", "" },
+  [".wsd"] = { "#cc3e44", "" },
   -- Python
   [".py"] = { "#3572A5", "" }, 
   [".pyc"] = { "#519aba", "" }, 
@@ -273,8 +273,11 @@ local known_names_icons = {
   ["docker-compose.yml"] = { "#4289a1", "" },
   ["dockerfile"] = { "#296478", "" },
   -- Gradle
-  ["gradlew"] = { "#6d8086", "" },
-  ["gradlew.bat"] = { "#6d8086", "" },
+  ["gradlew"] = { "#02303A", "" },
+  ["gradlew.bat"] = { "#02303A", "" },
+  ["settings.gradle"] = { "#02303A", "" },
+  ["build.gradle"] = { "#02303A", "" },
+  ["gradle.properties"] = { "#02303A", "" },
   -- LaTeX
   [".tex"] = {"#467f22", ""},
   [".sty"] = {"#467f22", ""},
