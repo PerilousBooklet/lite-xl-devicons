@@ -1,14 +1,23 @@
 -- mod-version:3
--- Author: PerilousBooklet (forked from Jipok's nonicons.lua)
--- Doesn't work well with scaling mode == "ui"
-
 local common = require "core.common"
 local config = require "core.config"
 local style = require "core.style"
 local TreeView = require "plugins.treeview"
 local Node = require "core.node"
 
--- Config
+
+-----------
+-- NOTES --
+-----------
+
+-- This plugin was forked from Jipok's nonicons.lua
+-- Doesn't work well with scaling mode == "ui"
+
+
+---------------------------
+-- Configuration Options --
+---------------------------
+
 config.plugins.devicons = common.merge({
   use_default_dir_icons = false,
   use_default_chevrons = false,
@@ -46,11 +55,21 @@ config.plugins.devicons = common.merge({
       default = true
     }
   }
-}, config.plugins.devicons)
+},config.plugins.devicons)
+
+
+----------
+-- Font --
+----------
 
 local icon_font = renderer.font.load(USERDIR.."/fonts/font_devicons/devicons.ttf", 15 * SCALE)
 local chevron_width = icon_font:get_width("") -- ?
 local previous_scale = SCALE
+
+
+---------------
+-- Icons Map --
+---------------
 
 local extension_icons = {
   -- Arduino
@@ -58,19 +77,19 @@ local extension_icons = {
   -- Assembly
   [".asm"] = {"#DE002D", ""},
   -- C
-  [".c"] = { "#599eff", "" }, 
-  [".cc"] = { "#599eff", "" }, 
+  [".c"] = { "#599eff", "" },
+  [".cc"] = { "#599eff", "" },
   [".h"] = { "#599eff", "" },
   -- Cobol
-  [".cbl"] = { "#005CA5", "" }, 
-  [".cob"] = { "#005CA5", "" }, 
+  [".cbl"] = { "#005CA5", "" },
+  [".cob"] = { "#005CA5", "" },
   [".cpy"] = { "#005CA5", "" },
   -- Clojure
-  [".clj"] = {"#91DC47", ""}, 
-  [".cljc"] = {"#91DC47", ""}, 
+  [".clj"] = {"#91DC47", ""},
+  [".cljc"] = {"#91DC47", ""},
   [".cljs"] = {"#91DC47", ""},
   -- ?
-  [".conf"] = { "#6d8086", "" }, 
+  [".conf"] = { "#6d8086", "" },
   [".cfg"] = { "#6d8086", "" },
   -- C++
   [".cpp"] = { "#519aba", "" },
@@ -79,30 +98,31 @@ local extension_icons = {
   -- C#
   [".cs"] = { "#596706", "" },
   -- CSS
-  [".css"] = { "#563d7c", "" }, 
+  [".css"] = { "#563d7c", "" },
   [".module.css"] = { "#563d7c", "" },
   [".sass"] = {"#CF649A", ""},
   [".scss"] = {"#CF649A", ""},
   -- D
-  [".d"] = {"#B03931", ""}, 
+  [".d"] = {"#B03931", ""},
   [".di"] = {"#B03931", ""},
-  
+
   -- Dart
   [".dart"] = {"#055A9C", ""},
   -- diff
   [".diff"] = { "#41535b", "" },
+  [".patch"] = { "#41535b", "" },
   -- Elm
   [".elm"] = { "#519aba", "" },
   -- Erlang
-  [".erl"] = { "#A90533", "" }, 
+  [".erl"] = { "#A90533", "" },
   [".hrl"] = { "#A90533", "" },
   -- Elixir
-  [".ex"] = { "#a074c4", "" }, 
+  [".ex"] = { "#a074c4", "" },
   [".exs"] = { "#a074c4", "" },
   -- F#
-  [".fs"] = { "#34B9D9", "" }, 
-  [".fsi"] = { "#34B9D9", "" }, 
-  [".fsx"] = { "#34B9D9", "" }, 
+  [".fs"] = { "#34B9D9", "" },
+  [".fsi"] = { "#34B9D9", "" },
+  [".fsx"] = { "#34B9D9", "" },
   [".fsscript"] = { "#34B9D9", "" },
   -- Fortran
   [".f"] = {"#734796", ""},
@@ -115,14 +135,14 @@ local extension_icons = {
   -- Go
   [".go"] = { "#519aba", "" },
   -- Groovy
-  [".groovy"] = {"#357A93", ""}, 
-  [".gvy"] = {"#357A93", ""}, 
-  [".gy"] = {"#357A93", ""}, 
+  [".groovy"] = {"#357A93", ""},
+  [".gvy"] = {"#357A93", ""},
+  [".gy"] = {"#357A93", ""},
   [".gsh"] = {"#357A93", ""},
   -- Haskell
   [".hs"] = {"#5E5086", ""},
   -- HTML
-  [".html"] = { "#e34c26", "" }, 
+  [".html"] = { "#e34c26", "" },
   [".html.erb"] = { "#e34c26", "" },
   -- WIP: J
   -- [".j2"] = { "#02D0FF", "" },
@@ -131,14 +151,14 @@ local extension_icons = {
   -- Julia
   [".jl"] = {"#9359A5", ""},
   -- Images
-  [".jpg"] = { "#a074c4", "" }, 
-  [".png"] = { "#a074c4", "" }, 
+  [".jpg"] = { "#a074c4", "" },
+  [".png"] = { "#a074c4", "" },
   [".svg"] = { "#a074c4", "" },
   -- WIP: Archive files
-  -- [".zip"] = { "", "" }, 
+  -- [".zip"] = { "", "" },
   -- [".gzip"] = { "", "" },
-  -- [".tar"] = { "", "" }, 
-  -- [".tar.xz"] = { "", "" }, 
+  -- [".tar"] = { "", "" },
+  -- [".tar.xz"] = { "", "" },
   -- [".tar.gz"] = { "", "" },
   -- [".rar"] = { "", "" },
   -- Javascript
@@ -146,10 +166,10 @@ local extension_icons = {
   -- JSON
   [".json"] = { "#854CC7", "" },
   -- Kotlin
-  [".kt"] = { "#816EE4", "" }, 
+  [".kt"] = { "#816EE4", "" },
   [".kts"] = { "#816EE4", "" },
   -- Lisp
-  [".lisp"] = { "#FFFFFF", "" }, 
+  [".lisp"] = { "#FFFFFF", "" },
   [".lsp"] = { "#FFFFFF", "" },
   -- Lua
   [".lua"] = { "#51a0cf", "" },
@@ -160,15 +180,15 @@ local extension_icons = {
   -- Ocaml
   [".ml"] = { "#EE750A", "" },
   -- Nim
-  [".nim"] = { "#FFE953", "" }, 
-  [".nims"] = { "#FFE953", "" }, 
+  [".nim"] = { "#FFE953", "" },
+  [".nims"] = { "#FFE953", "" },
   [".nimble"] = { "#FFE953", "" },
   -- Nix
   [".nix"] = {"#7EB3DF", ""},
   -- Odin
   [".odin"] = { "#3882D2", "" },
   -- Perl
-  [".pl"] = { "#519aba", "" }, 
+  [".pl"] = { "#519aba", "" },
   [".pm"] = { "#519aba", "" },
   -- PHP
   [".php"] = { "#a074c4", "" },
@@ -179,13 +199,13 @@ local extension_icons = {
   [".pu"] = { "#cc3e44", "" },
   [".wsd"] = { "#cc3e44", "" },
   -- Python
-  [".py"] = { "#3572A5", "" }, 
-  [".pyc"] = { "#519aba", "" }, 
+  [".py"] = { "#3572A5", "" },
+  [".pyc"] = { "#519aba", "" },
   [".pyd"] = { "#519aba", "" },
-  [".rpy"] = { "#3572A5", "" }, 
+  [".rpy"] = { "#3572A5", "" },
   [".rpyc"] = { "#519aba", "" },
   -- R
-  [".r"] = { "#358a5b", "" }, 
+  [".r"] = { "#358a5b", "" },
   [".R"] = { "#358a5b", "" },
   -- Rake
   [".rake"] = { "#701516", "" },
@@ -212,14 +232,14 @@ local extension_icons = {
   -- Swift
   [".swift"] = { "#e37933", "" },
   -- System Verilog
-  [".sv"] = { "#1A348F", "" }, 
+  [".sv"] = { "#1A348F", "" },
   [".svh"] = { "#1A348F", "" },
   -- TOMl
   [".toml"] = { "#6d8086", "" },
   -- Typescript
   [".ts"] = { "#519aba", "" },
   -- V
-  [".v"] = { "#536B88", "" }, [".vsh"] = { "#536B88", "" },
+  [".v"] = { "#536B88", "" },[".vsh"] = { "#536B88", "" },
   -- Vala
   [".vala"] = { "#706296", "" },
   -- WIP: Verilog
@@ -323,7 +343,12 @@ local known_names_icons = {
   ["build.zig"] = { "#6d8086", "" },
 }
 
--- Preparing colors
+
+----------
+-- MAIN --
+----------
+
+-- Prepare colors
 for k, v in pairs(extension_icons) do
   v[1] = { common.color(v[1]) }
 end
