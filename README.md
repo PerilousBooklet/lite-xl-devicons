@@ -10,6 +10,20 @@
 > `devicons` is currently undergoing maintenance.
 > Anyone who wants to use `devicons` now should uninstall it with `lpm` (if it was previously installed) and just copy/paste the `devicons.lua` and `devicons.ttf` files.
 
+### Manual (recommended)
+```sh
+# Go to your lite-xl directory
+cd ~/.config/lite-xl/
+
+# Create font subdirectory
+mkdir fonts/font_devicons/
+# Download devicons font
+curl -o fonts/font_devicons/devicons.ttf https://raw.githubusercontent.com/PerilousBooklet/lite-xl-devicons/refs/heads/main/fontello-842ac128/font/devicons.ttf
+# Download plugin
+curl -o plugins/devicons.lua https://raw.githubusercontent.com/PerilousBooklet/lite-xl-devicons/refs/heads/main/devicons.lua
+```
+
+### Using lpm
 Open a terminal window and run the following commands:
 ```sh
 lpm repo add "https://github.com/PerilousBooklet/lite-xl-devicons"
